@@ -1,0 +1,21 @@
+Flash Ubuntu - IFC6540
+
+1. Vào fastboot
+	- mở ADB : adb reboot bootloader
+2. Trong fastboot
+	- Dùng lệnh : fastboot devices (kiểm tra máy đã nhận fastboot chưa - Nếu đã nhận sẽ có thông tin devices)
+	- Dùng các lệnh : 
+			+ fastboot erase boot
+			+ fastboot erase system
+			+ fastboot erase recovery
+			+ fastboot erase cache
+			+ fastboot erase userdata
+			+ fastboot erase persist
+			Xóa các phân vùng trong bộ nhớ
+	- Dùng các lệnh :
+			+ fastboot flash boot boot.img  (flash lại phân vùng boot)
+			+ fastboot flash cache cache.img 
+			+ fastboot flash userdate ubuntu.img (flash hdh ubuntu vào bộ nhớ)
+	- Dùng lệnh : fastboot reboot (xong tút dây nguồn cắm lại đợi khởi động là xong)
+
+	
